@@ -1,0 +1,17 @@
+.body {
+    background-color: #e8e8e8;
+}
+
+div.landingContent {
+    margin-top:140px;
+    padding:30px;
+    background-color: lightgray;
+    width:50vw;
+    height:25vw;
+    border-radius:15px;
+    box-shadow: 0 0 2px rgba(255, 255, 255, 0);
+}
+
+.formDesign {
+
+}
