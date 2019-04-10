@@ -5,7 +5,7 @@ import { Steps } from 'antd';
 import { Icon } from 'antd';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter,Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import Logo from "./logofinal.png";
-import BackButton from "./backbutton.png"
+import BackButton from "./back2.png"
 import posed from 'react-pose';
 import { connect } from 'react-redux';
 //library used for previous user authentication, allowing in this case for users to store each timelime object.
@@ -321,7 +321,7 @@ drag(ev) {
 </div>
 
 <div className = "rewards">
-<a href = "./components/rewards/Rewards">
+<a href = "/rewards">
 <button
 style={{
   width: "150px",

@@ -3,8 +3,9 @@ import "./schedule.css"
 import ScheduleIcon from "./timeedit.png"
 import Time from "./002-time.png";
 import Logo from "./logofinal.png";
-import BackButton from "./back2.png";
+import Back from "./back3.png";
 
+import Grid from '@material-ui/core/Grid';
 
 
 class Schedule extends Component {
@@ -35,7 +36,7 @@ class Schedule extends Component {
               }}
              
             >
-                   <img src = {BackButton} alt = "A schedule icon"
+                   <img src = {Back} alt = "A schedule icon"
                     style = {{ 
                       
                       float: "left",
@@ -73,7 +74,8 @@ class Schedule extends Component {
            
            <div className = "dash" >
            
-           <section>
+           <Grid container>
+           <Grid item xs={12} sm={6}>
             <a href = "Timeline"
               style={{
                 width: "150px",
@@ -95,8 +97,8 @@ class Schedule extends Component {
                
             </a>
             <p>View Schedule</p>
-            </section>
-<section>
+            </Grid>
+            <Grid item xs={12} sm={6}>
             <a href = "Timeline"
               style={{
                 width: "150px",
@@ -116,7 +118,9 @@ class Schedule extends Component {
               }}></img>
             </a>
             <p>Edit Schedule</p>
-            </section>
+            </Grid>
+
+            </Grid>
 
 
             </div>

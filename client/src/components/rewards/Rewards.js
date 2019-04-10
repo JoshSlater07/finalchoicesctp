@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import "./rewards.css"
-import ScheduleIcon from "./timeedit.png"
+import Reward from "./positive-vote.png"
+import Grid from '@material-ui/core/Grid';
 import Time from "./002-time.png";
-
+import Logo from "./logofinal.png";
+import Back from "./back3.png";
 
 
 class Rewards extends Component {
@@ -13,73 +15,106 @@ class Rewards extends Component {
       {{ height: "75vh",
       
     }} 
-      className="col-sm-12">
+      className="dashboard">
         <div className="row">
-          <div className=" schedule col-sm-12">
-<div className = "scheduleTitle">
-          <h4>
-              <b>Choices - An Interactive Visual Schedule</b>
-              <br/>
-              <br/>
+          <div className="col-sm-12">
+            <h1>
+              Well Done! Schedule Complete!
+           </h1>
+           
+            <br></br>
+            <br></br>
+            <br></br>
+
+            <div className = "constants">
             
-
-            </h4>
-            </div>
-
-            <br />
-        
-             <div className = "ViewSchedule">
-
-            <a href = "Schedule"
+            <div className = "BackButton"></div>
+            <a href = "Dashboard"
               style={{
-                width: "150px",
-                height: "150px",
-                borderRadius: "75px",
-                margin: "25px",
-                letterSpacing: "1px"
+              
               }}
-              className="btn btn-large waves-effect waves-light hoverable white accent-3"
+             
             >
-                   <img src = {Time} alt = "A schedule icon"
+                   <img src = {Back} alt = "A schedule icon"
                     style = {{ 
-                      marginTop: "25px",
-                      width: "120px",
-                      height:"120px"
+                      
+                      float: "left",
+                      width: "90px",
+                      height:"90px",
+                      marginTop: "-100px",
+                      letterSpacing: "0.1em;"
+      
+                    }}></img>
+               
+            </a>
+
+            <div className = "HomeButton"></div>
+            <a href = "Dashboard"
+              style={{
+              
+              }}
+             
+            >
+                   <img src = {Logo} alt = "A schedule icon"
+                    style = {{ 
+                   
+                      float: "right",
+                      width: "90px",
+                      height:"90px",
+                      marginTop: "-100px"
                       
       
                     }}></img>
                
             </a>
-            <p>View Schedule</p>
-
+            
             </div>
-
-            <div className = "EditSchedule">
-
-            <a href = "Timeline"
+            
+           
+           <div className = "dash" >
+           
+           <Grid container>
+           <Grid item xs={12}>
+            <a href = "Timelime"
               style={{
-                width: "150px",
-                height: "150px",
-                borderRadius: "75px",
+                width: "250px",
+                height: "250px",
+                borderRadius: "150px",
                 margin: "25px",
                 letterSpacing: "1px"
               }}
               className="btn btn-large waves-effect waves-light hoverable white accent-3"
             >
-              <img src = {ScheduleIcon} alt = "A family icon" 
-              style = {{ 
-                marginTop: "25px",
-                width: "120px",
-                height:"120px"
-
-              }}></img>
+                   <img src = {Reward} alt = "A schedule icon"
+                    style = {{ 
+                      marginTop: "25px",
+                      width: "200px",
+                      height:"200px"
+                      
+      
+                    }}></img>
+               
             </a>
-            <p>Edit Schedule</p>
+            <p>Back to Timelime</p>
+            </Grid>
+            
+
+            </Grid>
+
+
             </div>
+
+            
+
            
+            
+            
+            
+          
             </div>
-            </div>
-            </div>
+          </div>
+        </div>
+     
     );
   }
 }

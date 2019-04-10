@@ -5,6 +5,17 @@ import { connect } from "react-redux";
 import { loginUser } from "../../actions/authActions";
 import classnames from "classnames";
 import "./login.css"
+import Background from "../layout/tempalte.jpg"
+
+import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
+import Dialog from '@material-ui/core/Dialog';
+import DialogContent from '@material-ui/core/DialogContent';
+import Grid from '@material-ui/core/Grid';
+
+import {landingContainer, landingImage, loginContainer} from "../../style"
+
+
 class Login extends Component {
   constructor() {
     super();
@@ -47,74 +58,139 @@ render() {
     const { errors } = this.state;
 return (
 
-      <div className="container">
-        <div style={{ marginTop: "4rem" }} className="row">
-          <div className="col s12 offset-s2">
-            <Link to="/" className="btn-flat waves-effect">
-              <i className="material-icons left">keyboard_backspace</i> Back to
-              home
-            </Link>
-            <div className="col s12" >
-              <h4>
-                <b>Login</b> below
-              </h4>
-              <p className="grey-text text-darken-1">
-                Don't have an account? <Link to="/register">Register</Link>
-              </p>
-            </div>
+  <div style={landingContainer}>
+
+    <img style={landingImage} src={Background}/>
+
+    <Dialog open={true}>
+          <DialogContent>
+
+            <div style={loginContainer}>
+
+                <Button variant="outlined" href="/">Home</Button>
+
+            <Typography variant="h6" align="center" gutterBottom>
+              Login
+            </Typography>
+
             <form noValidate onSubmit={this.onSubmit}>
-              <div className="input-field col s12">
-                <input
+            <input
                   onChange={this.onChange}
                   value={this.state.email}
                   error={errors.email}
                   id="email"
                   type="email"
+                  placeholder="Email"
                   className={classnames("", {
                     invalid: errors.email || errors.emailnotfound
                   })}
                 />
-                <label htmlFor="email">Email</label>
                 <span className="red-text">
                   {errors.email}
                   {errors.emailnotfound}
                 </span>
-              </div>
-              <div className="input-field col s12">
                 <input
                   onChange={this.onChange}
                   value={this.state.password}
                   error={errors.password}
                   id="password"
                   type="password"
+                  placeholder="Password"
                   className={classnames("", {
                     invalid: errors.password || errors.passwordincorrect
                   })}
                 />
-                <label htmlFor="password">Password</label>
                 <span className="red-text">
                   {errors.password}
                   {errors.passwordincorrect}
                 </span>
-              </div>
-              <div className="col s12">
-                <button
-                  style={{
-                    width: "150px",
-                    borderRadius: "3px",
-                    letterSpacing: "1.5px",
-                    marginTop: "1rem"
-                  }}
+
+                <Button
                   type="submit"
-                  className="btn btn-large waves-effect waves-light hoverable blue accent-3"
+                  fullWidth={true}
                 >
                   Login
-                </button>
-              </div>
+                </Button>
+
             </form>
-          </div>
-        </div>
-      </div>
+
+
+
+              </div>
+
+          </DialogContent>
+        </Dialog>
+
+  </div>
+
+      // <div className="container">
+      //   <div style={{ marginTop: "4rem" }} className="row">
+      //     <div className="col s12 offset-s2">
+      //       <Link to="/" className="btn-flat waves-effect">
+      //         <i className="material-icons left">keyboard_backspace</i> Back to
+      //         home
+      //       </Link>
+      //       <div className="col s12" >
+      //         <h4>
+      //           <b>Login</b> below
+      //         </h4>
+      //         <p className="grey-text text-darken-1">
+      //           Don't have an account? <Link to="/register">Register</Link>
+      //         </p>
+      //       </div>
+      //       <form noValidate onSubmit={this.onSubmit}>
+      //         <div className="input-field col s12">
+      //           <input
+      //             onChange={this.onChange}
+      //             value={this.state.email}
+      //             error={errors.email}
+      //             id="email"
+      //             type="email"
+      //             className={classnames("", {
+      //               invalid: errors.email || errors.emailnotfound
+      //             })}
+      //           />
+      //           <label htmlFor="email">Email</label>
+      //           <span className="red-text">
+      //             {errors.email}
+      //             {errors.emailnotfound}
+      //           </span>
+      //         </div>
+      //         <div className="input-field col s12">
+      //           <input
+      //             onChange={this.onChange}
+      //             value={this.state.password}
+      //             error={errors.password}
+      //             id="password"
+      //             type="password"
+      //             className={classnames("", {
+      //               invalid: errors.password || errors.passwordincorrect
+      //             })}
+      //           />
+      //           <label htmlFor="password">Password</label>
+      //           <span className="red-text">
+      //             {errors.password}
+      //             {errors.passwordincorrect}
+      //           </span>
+      //         </div>
+      //         <div className="col s12">
+      //           <button
+      //             style={{
+      //               width: "150px",
+      //               borderRadius: "3px",
+      //               letterSpacing: "1.5px",
+      //               marginTop: "1rem"
+      //             }}
+      //             type="submit"
+      //             className="btn btn-large waves-effect waves-light hoverable blue accent-3"
+      //           >
+      //             Login
+      //           </button>
+      //         </div>
+      //       </form>
+      //     </div>
+      //   </div>
+      // </div>
       
     );
   }

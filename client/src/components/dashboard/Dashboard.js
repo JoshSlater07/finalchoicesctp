@@ -6,6 +6,8 @@ import Time from "./002-time.png";
 import Family from "./003-family.png";
 import Options from "./001-system.png";
 
+import Grid from '@material-ui/core/Grid';
+
 import "./Dashboard.css";
 
 class Dashboard extends Component {
@@ -69,8 +71,10 @@ class Dashboard extends Component {
             
            
            <div className = "dash" >
+
+           <Grid container spacing={32}>
            
-           <section>
+           <Grid item xs={12} sm={4}>
             <a href = "Schedule"
               style={{
                 width: "150px",
@@ -92,8 +96,9 @@ class Dashboard extends Component {
                
             </a>
             <p>Schedule</p>
-            </section>
-<section>
+            </Grid>
+
+            <Grid item xs={12} sm={4}>
             <a href = "Account"
               style={{
                 width: "150px",
@@ -113,9 +118,9 @@ class Dashboard extends Component {
               }}></img>
             </a>
             <p>Account</p>
-            </section>
+            </Grid>
 
-<section>
+            <Grid item xs={12} sm={4}>
             <a href = "Preferences"
               style={{
                 width: "150px",
@@ -137,7 +142,11 @@ class Dashboard extends Component {
               }}></img>
             </a>
             <p>Preferences</p>
-            </section>
+            </Grid>
+
+            </Grid>
+
+
             </div>
 
             

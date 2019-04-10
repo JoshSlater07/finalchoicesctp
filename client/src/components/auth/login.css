@@ -1,9 +1,9 @@
-.loginForm {
-    text-align: center;
-    padding:30px;
-    background-color: lightgray;
-    width:50vw;
-    height:35vw;
-    border-radius:15px;
-    box-shadow: 0 0 2px rgba(255, 255, 255, 0);
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 80%;
+    background-color:blue;
 }

@@ -4,6 +4,9 @@ import Logo from "./logofinal.png";
 import Profile from "./003-family.png";
 import "./account.css";
 
+import Paper from '@material-ui/core/Paper';
+import Button from '@material-ui/core/Button';
+
 class Account extends Component {
   render() {
     
@@ -92,13 +95,17 @@ class Account extends Component {
       
                     }}></img>
                     </div>
+
+                    <Button style={{position:"absolute"}} variant="outlined">Edit Img</Button>
                
+            <Paper elevation={2} style={{padding:25}}>
+
+            <input placeholder="Name"></input>
+            <input placeholder="Email"></input>
+            <input placeholder="Password"></input>
+
+            </Paper>
             
-            <div className = "accountMock">
-
-<h3>Account Information</h3>
-
-</div>
             </section>
 
 

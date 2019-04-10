@@ -47,7 +47,19 @@ if (localStorage.jwtToken) {
 }
 class App extends Component {
 
- 
+  constructor(props) {
+    super(props);
+    this.state = {}
+    this.connecToServer = this.connecToServer.bind(this);
+  }
+
+  connecToServer() {
+    fetch('/');
+  }
+
+  componentDidMount() {
+    this.connecToServer();
+  }
 
   
 
